@@ -1,0 +1,22 @@
+<div *ngIf="introData!==null">
+
+<!--Assessment MEDIA template-->	
+	<div class="assessmentMedia xs-acol-12 sm-acol-12 acol-6 no-padding">
+		<img [src]= "introData.mediaIntro.imageSrc" [hidden]="introData.Quizes.length!==1">
+
+		<img data-bind="attr: { src: introData.mediaIntro.imageSrc(), alt:introData.mediaIntro.imageAlt()}, visible:introData.Quizes().length > 1 && introData.mediaIntro.mediaType()=='image', css: introData.Quizes().length == 1 ?  'singleAssessmentImg' : '' "/>
+		<video data-bind="attr: { src: introData.mediaIntro.videoSrc, alt:introData.mediaIntro.imageAlt}, visible:introData.Quizes().length > 1 && introData.mediaIntro.mediaType()=='video'">
+			Here goes video media
+		</video>
+
+	</div>
+		<!--Assessment intro template-->	
+	<div class="xs-acol-12 acol-6 assessment-intro">
+		<h4 class="title-intro" data-bind="text:introData.assessmentIntro.introSubtitle"></h4>
+		<p class="paragraph-intro" data-bind="text:introData.assessmentIntro.introParagraph"></p>
+		<span class="singleQANumber" data-bind="text:introData.Quizes()[0].theQuestions().length + ' Questions'"> 
+		</span>
+		<button id="start-single" class="menu-btn" name="singleButton" data-bind="text:introData.assessmentIntro.singleAssessmentButton" >
+		</button>
+	</div>
+</div>

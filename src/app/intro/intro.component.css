@@ -1,0 +1,133 @@
+/*INTRO*/
+	.assessment-intro{
+		padding: 17px 15px 19px;
+	}
+	.singleAssessment h4 {
+		font-size: 16px;
+		line-height: 22px;
+		padding: 0;
+		font-weight: 500;
+		color: #26272B;
+		margin: 0 0 20px 0;
+	}
+	
+	.singleAssessment p {
+		font-size: 14px;
+		line-height: 24px;
+		padding:0;
+		margin:0 0 53px 0;
+	
+	}
+	
+	.singleAssessment span {
+		font-size: 12px;
+		line-height: 21px;
+		color: #444;
+		margin: 0 0 15px 0;
+		display: block;
+		padding: 0;
+	}
+	
+	.singleAssessment .menu-btn{
+		width: 100%;
+		font-weight: 600;
+		margin: 0 auto;
+
+	}
+	.assessmentIntro h1 {
+		color: white;
+		padding: 40px 20px 20px;
+	}
+
+/*MEDIA*/
+	.assessmentMedia.multiAssessment {
+		height: 240px;
+
+	}
+	.singleAssessment .assessmentMedia {
+		min-height: 100%;
+		padding: 0;
+
+	}
+
+	.assessmentMedia img {
+		width: 100%;
+		height: 240px;
+		overflow: hidden;
+		display: block;
+		border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+
+	}
+
+	.assessmentMedia .singleAssesmentImg {
+		overflow:hidden;
+		display: block;
+    width: 100%;
+		min-height:386px;
+		object-fit: cover;
+		border-radius: 5px 5px 0 0;
+		-moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+		 -webkit-background-size: cover !important;
+		-moz-background-size: cover !important;
+		-o-background-size: cover !important;
+		background-size: cover !important;
+	}
+	@media (min-width: 991px) {
+		.assessment-intro{
+			padding: 47px 40px 33px;
+		}
+		.singleAssessment h4 {
+			font-size: 20px;
+			line-height: 24px;
+			padding: 0 20px;
+			font-weight: 500;
+			color: #26272B;
+			margin: 0 0 23px 0;
+		}
+
+		.singleAssessment p {
+			font-size: 16px;
+			line-height: 24px;
+			padding-left:20px;
+			padding-right: 20px;
+			margin:0 0 58px 0;
+
+		}
+
+		.singleAssessment span {
+			font-size: 12px;
+			line-height: 21px;
+			color: #444;
+			margin: 0 0 15px 0;
+			display: block;
+			padding: 0px 20px;
+		}
+
+		.singleAssessment .menu-btn{
+			margin-left:20px;
+			max-width: 290px;
+			font-weight: 600;
+
+		}
+		.assessmentIntro h1 {
+			color: white;
+			padding: 40px 20px 20px;
+		}
+
+		.assessmentMedia .singleAssesmentImg {
+			border-radius: 5px 0 0 5px;
+			-moz-border-radius: 5px 0 0 5px;
+			-webkit-border-radius: 5px 0 0 5px;
+		}
+		
+	}
+	@media (min-width: 1200px) {
+		.assessmentMedia .singleAssesmentImg {
+			border-radius: 5px 0 0 5px;
+			-moz-border-radius: 5px 0 0 5px;
+			-webkit-border-radius: 5px 0 0 5px;
+		}
+	}
