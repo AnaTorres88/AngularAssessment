@@ -11,7 +11,10 @@ export class IntroComponent implements OnInit {
   constructor(private _introData:QuizDataService) { }
 
   ngOnInit() {
+  	this.getQuiz();
+  }
+  getQuiz():void{
   	this._introData.getQuiz()
-		.subscribe(resQuizData => this.introData = resQuizData);
+  	.subscribe(quiz => this.introData = quiz);
   }
 }

@@ -11,9 +11,11 @@ export class AppComponent  {
 	appData:any=[];
 
   constructor(private _appData:QuizDataService) { }
-
-	ngOnInit() {
+  ngOnInit() {
+  	this.getQuiz();
+  }
+	getQuiz():void {
   	this._appData.getQuiz()
-		.subscribe(resQuizData => this.appData = resQuizData);
+		.subscribe(quiz => this.appData = quiz);
   }
 }
