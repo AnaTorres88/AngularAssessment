@@ -1,13 +1,12 @@
-<div>
-
+<div *ngIf="introData !== undefined">
 <!--Assessment MEDIA template-->	
 	<div class="assessmentMedia xs-acol-12 sm-acol-12 acol-6 no-padding">
-		<img [src]= "introData.mediaIntro.imageSrc" [hidden]="introData.Quizes.length!==1">
+				
 
-		<img data-bind="attr: { src: introData.mediaIntro.imageSrc(), alt:introData.mediaIntro.imageAlt()}, visible:introData.Quizes().length > 1 && introData.mediaIntro.mediaType()=='image', css: introData.Quizes().length == 1 ?  'singleAssessmentImg' : '' "/>
-		<video data-bind="attr: { src: introData.mediaIntro.videoSrc, alt:introData.mediaIntro.imageAlt}, visible:introData.Quizes().length > 1 && introData.mediaIntro.mediaType()=='video'">
-			Here goes video media
-		</video>
+
+		<img [src]= "introData.mediaIntro.imageSrc" [alt]="introData.mediaIntro.imageAlt" [hidden]="introData.Quizes.length == 1">
+
+		<img [src]= "introData.mediaIntro.imageSrc" [alt]="introData.mediaIntro.imageAlt" [hidden]="introData.Quizes.length == 1 && introData.mediaIntro.mediaType !=='image'" />
 
 	</div>
 		<!--Assessment intro template-->	

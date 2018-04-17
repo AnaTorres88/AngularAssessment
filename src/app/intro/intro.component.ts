@@ -6,8 +6,8 @@ import { QuizDataService } from '../quiz-data.service';
   styleUrls: ['./intro.component.css']
 })
 export class IntroComponent implements OnInit {
-	introData:any=[];
-
+	introData:any;
+	
   constructor(private _introData:QuizDataService) { }
 
   ngOnInit() {
@@ -15,6 +15,6 @@ export class IntroComponent implements OnInit {
   }
   getQuiz():void{
   	this._introData.getQuiz()
-  	.subscribe(quiz => this.introData = quiz);
+  	.subscribe(resintroData => this.introData = resintroData[0]);
   }
 }

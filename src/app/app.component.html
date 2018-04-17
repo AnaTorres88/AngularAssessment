@@ -1,10 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-
-<div class="nav-cards a-row">
+<div class="nav-cards a-row" *ngIf="appData !== undefined">
   <nav class="singleAssessment">
     <div data-bind="visible:showAssessment()==false && surveyCompleted()==false">
-      <h3>Intro title</h3>
+      <h3>{{appData.assessmentIntro.introTitle}}</h3>
       <div class="a-row section-single">
         <app-intro></app-intro>
       </div>

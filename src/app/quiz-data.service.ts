@@ -16,7 +16,8 @@ export class QuizDataService {
   				return Observable.throw(error);
   			})
   	}*/
-  		getQuiz():Observable<any> {
-  		return this._http.get<any>(this._url)
+  		getQuiz():Observable<any[]> {
+  		return this._http.get<any[]>(this._url)
+				
 			}
   	}

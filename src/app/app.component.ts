@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { QuizDataService } from './quiz-data.service';
-
+import { JsonPipe } from '@angular/common';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,7 +8,7 @@ import { QuizDataService } from './quiz-data.service';
 })
 export class AppComponent  {
   title = 'app';
-	appData:any=[];
+	appData:any;
 
   constructor(private _appData:QuizDataService) { }
   ngOnInit() {
@@ -16,6 +16,6 @@ export class AppComponent  {
   }
 	getQuiz():void {
   	this._appData.getQuiz()
-		.subscribe(quiz => this.appData = quiz);
+		.subscribe(quiz => this.appData = quiz[0]);
   }
 }

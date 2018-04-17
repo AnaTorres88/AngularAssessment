@@ -54,7 +54,6 @@
 		width: 100%;
 		height: 240px;
 		overflow: hidden;
-		display: block;
 		border-radius: 5px;
 		-webkit-border-radius: 5px;
 		-moz-border-radius: 5px;
@@ -63,7 +62,6 @@
 
 	.assessmentMedia .singleAssesmentImg {
 		overflow:hidden;
-		display: block;
     width: 100%;
 		min-height:386px;
 		object-fit: cover;
