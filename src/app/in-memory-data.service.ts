@@ -19,9 +19,7 @@ export class InMemoryDataService implements InMemoryDbService {
     "imageSrc": "http://www.carvemypumpkin.com/wp-content/uploads/2014/09/ppci1.jpg",
     "imageAlt": "this is the alt for image"
   },
-  "Quizes": [
-
-    {
+  "Quiz": {
       "Id": 1,
       "max":62,
       "min":14,
@@ -113,8 +111,7 @@ export class InMemoryDataService implements InMemoryDbService {
               "value": 2
             }
           ],
-          "selectedAnswer":""
-      },
+          "selectedAnswer":""},
         {
           "id": 1,
           "question": "what's your favorite pet?",
@@ -170,7 +167,8 @@ export class InMemoryDataService implements InMemoryDbService {
                   }
                 ],
           "selectedAnswer": ""
-          }, {
+          }, 
+          {
           "id": 3,
           "question": "What's your favorite PvP game?",
           "instructions": "Select the option you prefer",
@@ -256,11 +254,8 @@ export class InMemoryDataService implements InMemoryDbService {
           "questionValue": 2,
           "selectedAnswer": ""
           }
-
-
       ]
-  }
-          ],
+    },
   "resultsPage": {
     "resultsTitle": "Your Results",
     "resultsSubtitle": "100% - You're a Market Leader",

@@ -1,21 +1,16 @@
 <div *ngIf="introData !== undefined">
 <!--Assessment MEDIA template-->	
 	<div class="assessmentMedia xs-acol-12 sm-acol-12 acol-6 no-padding">
-				
-
-
-		<img [src]= "introData.mediaIntro.imageSrc" [alt]="introData.mediaIntro.imageAlt" [hidden]="introData.Quizes.length == 1">
-
-		<img [src]= "introData.mediaIntro.imageSrc" [alt]="introData.mediaIntro.imageAlt" [hidden]="introData.Quizes.length == 1 && introData.mediaIntro.mediaType !=='image'" />
-
+		<img [src]= "introData.mediaIntro.imageSrc" [alt]="introData.mediaIntro.imageAlt" >
 	</div>
 		<!--Assessment intro template-->	
 	<div class="xs-acol-12 acol-6 assessment-intro">
-		<h4 class="title-intro" data-bind="text:introData.assessmentIntro.introSubtitle"></h4>
-		<p class="paragraph-intro" data-bind="text:introData.assessmentIntro.introParagraph"></p>
-		<span class="singleQANumber" data-bind="text:introData.Quizes()[0].theQuestions().length + ' Questions'"> 
+		<h4 class="title-intro">{{introData.assessmentIntro.introSubtitle}}</h4>
+		<p class="paragraph-intro">{{introData.assessmentIntro.introParagraph}}</p>
+		<span class="singleQANumber"> {{introData.Quiz.theQuestions.length}} Questions
 		</span>
-		<button id="start-single" class="menu-btn" name="singleButton" data-bind="text:introData.assessmentIntro.singleAssessmentButton" >
+		<button id="start-single" class="menu-btn" name="singleButton">
+			{{introData.assessmentIntro.singleAssessmentButton}}
 		</button>
 	</div>
 </div>
