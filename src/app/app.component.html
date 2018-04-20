@@ -2,16 +2,16 @@
 
 <div class="nav-cards a-row" *ngIf="appData !== undefined">
   <nav class="singleAssessment">
-    <div data-bind="visible:showAssessment()==false && surveyCompleted()==false">
+    <div [hidden]="appData.showAssessment==true && appData.surveyCompleted==true">
       <h3>{{appData.assessmentIntro.introTitle}}</h3>
       <div class="a-row section-single">
-        <app-intro></app-intro>
+        <app-intro (showTheAssessment)="showAssessmentReceive($event)"></app-intro>
       </div>
     </div>
 
 
-    <div data-bind="visible:$component.showAssessment() && $component.surveyCompleted()==false" >
-      <h3 class="in-assessment" data-bind="text:data.assessmentIntro.introTitle"></h3>
+    <div [hidden]="showAssessment==false">
+       <h3 class="in-assessment">{{appData.assessmentIntro.introTitle}}</h3>
        <div>Questions</div>
     </div>
     <div data-bind="visible:$component.surveyCompleted()">

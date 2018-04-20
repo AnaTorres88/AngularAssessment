@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { QuizDataService } from '../quiz-data.service';
 @Component({
   selector: 'app-intro',
@@ -7,7 +7,10 @@ import { QuizDataService } from '../quiz-data.service';
 })
 export class IntroComponent implements OnInit {
 	introData:any;
-	
+  show:boolean=true;
+  @Output() showTheAssessment = new EventEmitter<boolean>();
+
+
   constructor(private _introData:QuizDataService) { }
 
   ngOnInit() {
@@ -16,5 +19,9 @@ export class IntroComponent implements OnInit {
   getQuiz():void{
   	this._introData.getQuiz()
   	.subscribe(resintroData => this.introData = resintroData[0]);
+  }
+  showAssessment() {
+   this.showTheAssessment.emit(this.show)
+   console.log("clicked")
   }
 }

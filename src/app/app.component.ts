@@ -9,13 +9,21 @@ import { JsonPipe } from '@angular/common';
 export class AppComponent  {
   title = 'app';
 	appData:any;
-
+  showAssessment:boolean=false;
+  surveyCompleted:boolean=false;
   constructor(private _appData:QuizDataService) { }
+
+
   ngOnInit() {
   	this.getQuiz();
   }
 	getQuiz():void {
   	this._appData.getQuiz()
 		.subscribe(quiz => this.appData = quiz[0]);
+  }
+    showAssessmentReceive($event){
+    this.showAssessment=$event;
+    console.log($event)
+
   }
 }

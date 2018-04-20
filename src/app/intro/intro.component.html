@@ -9,7 +9,7 @@
 		<p class="paragraph-intro">{{introData.assessmentIntro.introParagraph}}</p>
 		<span class="singleQANumber"> {{introData.Quiz.theQuestions.length}} Questions
 		</span>
-		<button id="start-single" class="menu-btn" name="singleButton">
+		<button id="start-single" class="menu-btn" name="singleButton" (click)="showAssessment()">
 			{{introData.assessmentIntro.singleAssessmentButton}}
 		</button>
 	</div>
