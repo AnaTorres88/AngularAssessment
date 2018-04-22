@@ -8,11 +8,13 @@ import { IntroComponent } from './intro/intro.component';
 import { QuizDataService } from './quiz-data.service';
 import { InMemoryDataService } from './in-memory-data.service';
 import { HttpClientModule }    from '@angular/common/http';
+import { QuestionComponent } from './question/question.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    IntroComponent
+    IntroComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,HttpModule,HttpClientModule,

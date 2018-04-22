@@ -1,0 +1,43 @@
+<div>
+<!--Assessment QUESTION template-->	
+	<div class="content" data-bind="">
+		<div class="section-question" data-bind="dropdownShown">
+			
+			<!-- ko foreach: {data:$component.theQuestions(), as:'question'} -->
+				<div class="question" *ngFor="let question of theQuestions; let i = index" [hidden]="activeSlide!==index" [ngClass]="slideDirection">
+
+					<h5 data-bind="text: id() +' . ' + question() "></h5>
+					<div class="instructions-container">
+
+						<!-- ko if: instructions !="" -->
+							<span class="instructions" data-bind="text:instructions()">
+							</span>
+						<!--/ko-->
+					</div>	
+					<div class="question-body" *ngIf="inputType=='checkbox'">
+						<div>CHECKBOX</div>
+					</div>
+					<div class="question-body" *ngIf="inputType=='radio'">
+						<div>RADIO</div>
+					</div>
+					<div class="question-body" *ngIf="inputType=='slider'">
+						<div>SLIDER</div>
+					</div>
+					<div class="question-body" *ngIf="inputType=='openQuestion'">
+						<div>OPEN</div>
+					</div>
+				</div>
+			<!-- /ko -->
+		</div>
+		<footer>
+			<button class="prev-btn" data-bind="click:function(){$component.prev()}">PREVIOUS</button>
+			<span class="progress"> <!-- ko text:$component.activeSlide()+1 --><!-- /ko --> 
+				of 
+				<span>{{theQuestions.length}}</span>
+				<!-- ko text:$component.theQuestions().length --><!-- /ko --> 
+			</span>
+			<button class="next-btn" data-bind="click:function(){$component.next()}, visible: $component.activeSlide()+1<$component.theQuestions().length, disable: $component.required, $component.validate()">NEXT</button>
+			<button class="next-btn results-btn" id="results" data-bind="visible:$component.activeSlide()+1==$component.theQuestions().length,disable: $component.required, $component.validate()">VIEW MY RESULTS</button>
+		</footer>
+	</div>
+</div>
