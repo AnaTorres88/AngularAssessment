@@ -9,6 +9,9 @@ import { QuizDataService } from './quiz-data.service';
 import { InMemoryDataService } from './in-memory-data.service';
 import { HttpClientModule }    from '@angular/common/http';
 import { QuestionComponent } from './question/question.component';
+import {
+  BrowserAnimationsModule
+} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,8 +20,8 @@ import { QuestionComponent } from './question/question.component';
     QuestionComponent
   ],
   imports: [
-    BrowserModule,HttpModule,HttpClientModule,
-FormsModule,  HttpClientInMemoryWebApiModule.forRoot(
+    BrowserModule, HttpModule, HttpClientModule,
+FormsModule, BrowserAnimationsModule, HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     )
   ],

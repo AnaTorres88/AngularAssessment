@@ -1,43 +1,41 @@
 <div>
 <!--Assessment QUESTION template-->	
 	<div class="content" data-bind="">
-		<div class="section-question" data-bind="dropdownShown">
-			
-			<!-- ko foreach: {data:$component.theQuestions(), as:'question'} -->
-				<div class="question" *ngFor="let question of theQuestions; let i = index" [hidden]="activeSlide!==index" [ngClass]="slideDirection">
+		<div class="section-question">
+			<div class="question-inner" [ngStyle]="{'transform':'translateX(' + transform + '%)'}" >
 
-					<h5 data-bind="text: id() +' . ' + question() "></h5>
+				<div class="question" *ngFor="let question of theQuestions; let i=index" [hidden]="i !== activeSlide">
+					<h5>{{question.id +' . ' + question.question }}</h5>{{activeSlide}}{{i}}
 					<div class="instructions-container">
-
-						<!-- ko if: instructions !="" -->
-							<span class="instructions" data-bind="text:instructions()">
-							</span>
-						<!--/ko-->
+						<span *ngIf="question.instructions" class="instructions">
+							{{question.instructions}}
+						</span>
 					</div>	
-					<div class="question-body" *ngIf="inputType=='checkbox'">
+					<div class="question-body" *ngIf="question.inputType=='checkbox'">
 						<div>CHECKBOX</div>
 					</div>
-					<div class="question-body" *ngIf="inputType=='radio'">
+					<div class="question-body" *ngIf="question.inputType=='radio'">
 						<div>RADIO</div>
 					</div>
-					<div class="question-body" *ngIf="inputType=='slider'">
+					<div class="question-body" *ngIf="question.inputType=='slider'">
 						<div>SLIDER</div>
 					</div>
-					<div class="question-body" *ngIf="inputType=='openQuestion'">
+					<div class="question-body" *ngIf="question.inputType=='openQuestion'">
 						<div>OPEN</div>
 					</div>
 				</div>
-			<!-- /ko -->
+			</div>
 		</div>
 		<footer>
-			<button class="prev-btn" data-bind="click:function(){$component.prev()}">PREVIOUS</button>
+			<button class="prev-btn" (click)="prev()">PREVIOUS</button>
 			<span class="progress"> <!-- ko text:$component.activeSlide()+1 --><!-- /ko --> 
+				{{activeSlide+1}}
 				of 
-				<span>{{theQuestions.length}}</span>
+				{{theQuestions.length}}
 				<!-- ko text:$component.theQuestions().length --><!-- /ko --> 
 			</span>
-			<button class="next-btn" data-bind="click:function(){$component.next()}, visible: $component.activeSlide()+1<$component.theQuestions().length, disable: $component.required, $component.validate()">NEXT</button>
-			<button class="next-btn results-btn" id="results" data-bind="visible:$component.activeSlide()+1==$component.theQuestions().length,disable: $component.required, $component.validate()">VIEW MY RESULTS</button>
+			<button class="next-btn" (click)="next()" [hidden]="activeSlide+1==theQuestions.length">NEXT</button>
+			<button class="next-btn results-btn" id="results" [hidden]="activeSlide+1!==theQuestions.length">VIEW MY RESULTS</button>
 		</footer>
 	</div>
 </div>

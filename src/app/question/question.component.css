@@ -1,6 +1,11 @@
 /*QUESTION SINGLE*/
+:host{
+	display: block;
+	overflow: hidden;
+	max-width: 90%;
+	margin: 0 auto;
+}
 .content {
-	max-width: 97%;
 	display:block;
 	margin: 0 auto;
 	-webkit-box-shadow: 0 20px 60px -23px rgba(0, 0, 0, 0.45);
@@ -26,18 +31,32 @@
 	max-width: 90%;
 	margin: 0 auto;
 }
+
+
 .section-question {
-	position:relative;
 	min-height:315px;
-	background:#fff;
+	width: 100%;
+	overflow: hidden;
+  background:#fff;
   -webkit-box-shadow: 0 20px 60px -23px rgba(0, 0, 0, 0.45);
   box-shadow: 0 20px 60px -23px rgba(0, 0, 0, 0.45);
-	width: 100%;
-	overflow:hidden;
 	border-radius: 5px 5px 0px 0px;
 	-moz-border-radius: 5px 5px 0px 0px;
 	-webkit-border-radius: 5px 5px 0px 0px;
 }
+.question{
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	display:block;
+}
+.question-inner{
+	display: flex;
+	flex-wrap:nowrap;
+	width: 300%;
+	transition: all 0.3s ease;
+}
+
 .multiAssessment .section-question{
 	min-height: 442px;
 	background:none;
@@ -45,14 +64,18 @@
 .section-question.in-dropdown{
 	overflow: visible;
 }
+/*
 .section-question.in-dropdown .question.selected{
 	position:absolute;
-}
+}*/
 .section-question.in-dropdown
 .content{
 		-webkit-box-shadow: 0 20px 60px -23px rgba(0, 0, 0, 0.45);
 		box-shadow: 0 20px 60px -23px rgba(0, 0, 0, 0.45);
 	}
+
+
+/*
 .question {
 	position:absolute;
 	left:0;
@@ -65,6 +88,7 @@
   animation-duration: 0.4s;
   animation-timing-function: ease-in-out;
 }
+*/
 .slide {
   padding:0;
   left:0;
@@ -91,50 +115,7 @@ h5 {
 	line-height: 24px;
 	display:inline-block;
 }
-/*ANIMATION STYLEs*/
-.section-question .question.selected {
-  /* visible event content */
-  position: relative;
-  z-index: 2;
-  opacity: 1;
-  transform: translateX(0);
-}
 
-.section-question .question.enter-right, 
-.section-question .question.leave-right {
-  animation-name: cd-enter-right;
-}
-.section-question .question.enter-left, 
-.section-question .question.leave-left {
-  animation-name: cd-enter-left;
-}
-.section-question .question.leave-right, 
-.section-question .question.leave-left {
-  animation-direction: reverse;
-}
-
-/*KEYFRAMES*/
-@keyframes cd-enter-right {
-  0% {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0%);
-
-  }
-}
-@keyframes cd-enter-left {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
 footer {
 	position:relative;
 	width: 100%;
@@ -199,7 +180,6 @@ footer {
 }
 	@media (min-width: 991px) {
 		.content {
-			max-width: 90%;
 		}
 		.slider-container {
 			max-width: 490px;
@@ -215,7 +195,7 @@ footer {
 	}
 	@media (min-width: 1200px) {
 		.content {
-			max-width: 90%;
+			
 		}
 
 		.slider-container {

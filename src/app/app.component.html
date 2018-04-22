@@ -2,7 +2,7 @@
 
 <div class="nav-cards a-row" *ngIf="appData !== undefined">
   <nav class="singleAssessment">
-    <div [hidden]="appData.showAssessment==true && appData.surveyCompleted==true">
+    <div [hidden]="showAssessment==true">
       <h3>{{appData.assessmentIntro.introTitle}}</h3>
       <div class="a-row section-single">
         <app-intro (showTheAssessment)="showAssessmentReceive($event)"></app-intro>
