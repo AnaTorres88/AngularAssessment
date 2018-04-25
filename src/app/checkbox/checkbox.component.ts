@@ -6,11 +6,11 @@ import { Component,Input,OnInit } from '@angular/core';
   styleUrls: ['./checkbox.component.css']
 })
 export class CheckboxComponent implements OnInit {
- 
+	
 
 
   constructor() { }
-  @Input() questiona:any;
+  @Input() question:any;
 
   ngOnInit() {
   }

@@ -1,11 +1,11 @@
 <div>
 	<ul class="checkbox-input a-row">
-			<li data-bind="attr:{'aria-label':'checkbox'}" *ngFor="">
-				<input type="checkbox" data-bind="attr:{id:option[$index()+1], name:option[$index()+1]}, checkedValue:option, checked:$component.questionData.selectedAnswer">
-				<label data-bind="attr:{for:option[$index()+1]}" >
-					<div class="option-img" data-bind="style:{background:$component.imgSrc($index())}, visible:option.img"></div>
+			<li data-bind="attr:{'aria-label':'checkbox'}" *ngFor="let option of question.options; let i=index">
+				<input type="checkbox" [id]="option[i+1]" [name]="option[i+1]" data-bind="checkedValue:option, checked:$component.questionData.selectedAnswer">
+				<label [for]="option[i+1]">
+					<div  *ngIf="option.img" class="option-img" [ngStyle]="{background:'transparent url(' + option.img + ') no-repeat center center/' + 'cover'}"></div>
 		
-					<span data-bind="css: option.img  ? 'change-span' : '' ">
+					<span [ngClass]="option.img? 'change-span': ''">
 						{{option[i+1]}}
 		
 					</span>

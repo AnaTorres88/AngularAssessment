@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class QuestionComponent implements OnInit {
 	@Input() appData:any;
 	slideDirection:string="next";
+
 	activeSlide:number=0;
 	end:boolean=false;
 	index:number=0;
@@ -15,20 +16,18 @@ export class QuestionComponent implements OnInit {
 	validate:boolean=false;
 	slide:string="";
 	transform:number=0;
-	slideNext:any=100/7
+	length;
+	slideNext;
   constructor() { }
+	
   ngOnInit() {
 		this.translate();
+		this.length= this.appData.Quiz.theQuestions.length;
+		this.slideNext=100/this.length
   }
-  ngOnChanges(){
 
-  }
 	
 	/*CAROUSEL FUNCTIONS*/
-	length(){
-		return this.appData.Quiz.theQuestions.length;
-	}
-
 
 	translate(){
 			return this.transform=0;

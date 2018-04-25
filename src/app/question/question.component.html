@@ -2,17 +2,17 @@
 <!--Assessment QUESTION template-->	
 	<div class="content" data-bind="">
 		<div class="section-question"> 
-			<div class="question-inner" [ngStyle]="{transform:'translateX(' + transform + '%)', width: length() * 100 + '%' }" >
+			<div class="question-inner" [ngStyle]="{transform:'translateX(' + transform + '%)', width: length * 100 + '%' }" >
 
 				<div class="question" *ngFor="let question of appData.Quiz.theQuestions; let i=index" [hidden]="i !== activeSlide">
-					<h5>{{question.id +' . ' + question.question }}</h5>{{activeSlide}}{{i}}
+					<h5>{{question.id +' . ' + question.question }}</h5>
 					<div class="instructions-container">
 						<span *ngIf="question.instructions" class="instructions">
 							{{question.instructions}}
 						</span>
 					</div>	
 					<div class="question-body" *ngIf="question.inputType=='checkbox'">
-						<checkbox></checkbox>
+						<checkbox [question]="question"></checkbox>
 					</div>
 					<div class="question-body" *ngIf="question.inputType=='radio'">
 						<div>RADIO</div>
@@ -31,7 +31,7 @@
 			<span class="progress">
 				{{activeSlide+1}}
 				of 
-				{{length()}}
+				{{length}}
 				
 			</span>
 			<button class="next-btn" (click)="next()" [hidden]="activeSlide+1==appData.Quiz.theQuestions.lenght">NEXT</button>
