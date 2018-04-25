@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { QuizDataService } from './quiz-data.service';
 import { JsonPipe } from '@angular/common';
 @Component({

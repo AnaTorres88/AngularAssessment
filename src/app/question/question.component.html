@@ -1,10 +1,10 @@
 <div>
 <!--Assessment QUESTION template-->	
 	<div class="content" data-bind="">
-		<div class="section-question">
-			<div class="question-inner" [ngStyle]="{'transform':'translateX(' + transform + '%)'}" >
+		<div class="section-question"> 
+			<div class="question-inner" [ngStyle]="{transform:'translateX(' + transform + '%)', width: length() * 100 + '%' }" >
 
-				<div class="question" *ngFor="let question of theQuestions; let i=index" [hidden]="i !== activeSlide">
+				<div class="question" *ngFor="let question of appData.Quiz.theQuestions; let i=index" [hidden]="i !== activeSlide">
 					<h5>{{question.id +' . ' + question.question }}</h5>{{activeSlide}}{{i}}
 					<div class="instructions-container">
 						<span *ngIf="question.instructions" class="instructions">
@@ -12,7 +12,7 @@
 						</span>
 					</div>	
 					<div class="question-body" *ngIf="question.inputType=='checkbox'">
-						<div>CHECKBOX</div>
+						<checkbox></checkbox>
 					</div>
 					<div class="question-body" *ngIf="question.inputType=='radio'">
 						<div>RADIO</div>
@@ -28,14 +28,14 @@
 		</div>
 		<footer>
 			<button class="prev-btn" (click)="prev()">PREVIOUS</button>
-			<span class="progress"> <!-- ko text:$component.activeSlide()+1 --><!-- /ko --> 
+			<span class="progress">
 				{{activeSlide+1}}
 				of 
-				{{theQuestions.length}}
-				<!-- ko text:$component.theQuestions().length --><!-- /ko --> 
+				{{length()}}
+				
 			</span>
-			<button class="next-btn" (click)="next()" [hidden]="activeSlide+1==theQuestions.length">NEXT</button>
-			<button class="next-btn results-btn" id="results" [hidden]="activeSlide+1!==theQuestions.length">VIEW MY RESULTS</button>
+			<button class="next-btn" (click)="next()" [hidden]="activeSlide+1==appData.Quiz.theQuestions.lenght">NEXT</button>
+			<button class="next-btn results-btn" id="results" [hidden]="activeSlide+1!==appData.Quiz.theQuestions.lenght">VIEW MY RESULTS</button>
 		</footer>
 	</div>
 </div>

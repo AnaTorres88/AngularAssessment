@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'question',
@@ -6,23 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./question.component.css']
 })
 export class QuestionComponent implements OnInit {
-theQuestions=[
-	{id:1,
-	instructions:"instruction yes",
-	question:"do you like cheese?",
-	inputType:"checkbox"
-	},
-	{id:2,
-	instructions:"instruction yes",
-	question:"Do U dance?!",
-	inputType:"radio"
-	},
-	{id:3,
-	instructions:"",
-	question:"Do you play Overwatch?",
-	inputType:"slider"
-	}
-	]
+	@Input() appData:any;
 	slideDirection:string="next";
 	activeSlide:number=0;
 	end:boolean=false;
@@ -31,15 +15,21 @@ theQuestions=[
 	validate:boolean=false;
 	slide:string="";
 	transform:number=0;
-	slideNext:number=100/this.theQuestions.length;	
-	
+	slideNext:any=100/7
   constructor() { }
-
   ngOnInit() {
 		this.translate();
   }
+  ngOnChanges(){
+
+  }
 	
 	/*CAROUSEL FUNCTIONS*/
+	length(){
+		return this.appData.Quiz.theQuestions.length;
+	}
+
+
 	translate(){
 			return this.transform=0;
 		}
@@ -47,6 +37,7 @@ theQuestions=[
 		this.slideDirection='next';
 		this.activeSlide=this.activeSlide+1;
 		this.transform=-this.slideNext+this.transform
+		console.log(this.slideNext)
 	 }
 	prev(){
 		this.slideDirection = 'prev'

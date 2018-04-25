@@ -1,0 +1,15 @@
+<div>
+	<ul class="checkbox-input a-row">
+			<li data-bind="attr:{'aria-label':'checkbox'}" *ngFor="">
+				<input type="checkbox" data-bind="attr:{id:option[$index()+1], name:option[$index()+1]}, checkedValue:option, checked:$component.questionData.selectedAnswer">
+				<label data-bind="attr:{for:option[$index()+1]}" >
+					<div class="option-img" data-bind="style:{background:$component.imgSrc($index())}, visible:option.img"></div>
+		
+					<span data-bind="css: option.img  ? 'change-span' : '' ">
+						{{option[i+1]}}
+		
+					</span>
+				</label>
+			</li>
+	</ul>
+</div>

@@ -12,12 +12,14 @@ import { QuestionComponent } from './question/question.component';
 import {
   BrowserAnimationsModule
 } from '@angular/platform-browser/animations';
+import { CheckboxComponent } from './checkbox/checkbox.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IntroComponent,
-    QuestionComponent
+    QuestionComponent,
+    CheckboxComponent
   ],
   imports: [
     BrowserModule, HttpModule, HttpClientModule,
