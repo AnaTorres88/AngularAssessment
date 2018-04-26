@@ -36,7 +36,6 @@ export class QuestionComponent implements OnInit {
 		this.slideDirection='next';
 		this.activeSlide=this.activeSlide+1;
 		this.transform=-this.slideNext+this.transform
-		console.log(this.slideNext)
 	 }
 	prev(){
 		this.slideDirection = 'prev'

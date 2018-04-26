@@ -13,13 +13,15 @@ import {
   BrowserAnimationsModule
 } from '@angular/platform-browser/animations';
 import { CheckboxComponent } from './checkbox/checkbox.component';
+import { RadioComponent } from './radio/radio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IntroComponent,
     QuestionComponent,
-    CheckboxComponent
+    CheckboxComponent,
+    RadioComponent
   ],
   imports: [
     BrowserModule, HttpModule, HttpClientModule,

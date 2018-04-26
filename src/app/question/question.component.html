@@ -15,7 +15,7 @@
 						<checkbox [question]="question"></checkbox>
 					</div>
 					<div class="question-body" *ngIf="question.inputType=='radio'">
-						<div>RADIO</div>
+						<radio [question]="question"></radio>
 					</div>
 					<div class="question-body" *ngIf="question.inputType=='slider'">
 						<div>SLIDER</div>

@@ -1,0 +1,16 @@
+<div>
+	<ul class="radio-input a-row">
+		<li aria-label="radio" *ngFor="let option of question.options; let i=index" [ngClass]="option!==question.selectedAnswer ? 'not-selected':''" >
+			<input type="radio" [id]="option[i+1]" [name]="option[i+1]" [value]="option[i]" [checked]="option"[(ngModel)]="option[i]" (click)="radioValues(option,i)">
+			<label [for]="option[i+1]">
+				<div class="option-img" *ngIf="option.img"[ngClass]="question.selectedAnswer == option ? 'checked':''" [ngStyle]="{background:'transparent url(' + option.img + ') no-repeat center center/' + 'cover'}"></div>
+				<span *ngIf="option.img" [ngClass]="option.img ? 'change-span checked': ''">
+					{{option[i+1]}}
+				</span>
+				<span *ngIf="!option.img" [ngClass]="question.selectedAnswer == option ? 'checked':''">
+					{{option[i+1]}}
+				</span>
+			</label>
+		</li>
+	</ul>
+</div>
