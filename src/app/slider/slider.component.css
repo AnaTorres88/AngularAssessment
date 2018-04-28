@@ -60,21 +60,21 @@
 .slider-tags .slider-label.current:first-letter {
 	font-weight: 600;
 }
- ::ng-deep.noUi-pips-horizontal{
+.slider-container .noUi-pips-horizontal{
 display:none;
 }
 li.slider-label::after {
     display: flex;
     content: "";
-    top: 66%;
+    top: 44%;
     margin: 0 27px;
     position: absolute;
 		width: 1px;
     height: 22px;
 		background-color: #ccc;
 }
- ::ng-deep.noUi-marker.noUi-marker-horizontal,
- ::ng-deep.noUi-marker.noUi-marker-large{
+.slider-container .noUi-marker.noUi-marker-horizontal,
+.slider-container .noUi-marker.noUi-marker-large{
     margin-left: -1px;
     width: 1px;
     height: 22px;
@@ -82,17 +82,17 @@ li.slider-label::after {
 		background-color: #ccc;
 }
 
-::ng-deep.noUi-value.noUi-value-horizontal.noUi-value-large {
+.slider-container .noUi-value.noUi-value-horizontal.noUi-value-large {
     display: none;
 }
- ::ng-deep.noUi-marker.noUi-marker-large:first-of-type{
+.slider-container .noUi-marker.noUi-marker-large:first-of-type{
 	margin-left: 11px;
 }
- ::ng-deep.noUi-marker.noUi-marker-large:nth-of-type(2n){
+.slider-container .noUi-marker.noUi-marker-large:nth-of-type(2n){
 	margin-left:-15px;
 }
 
-.slider-container ::ng-deep.noUi-target {
+.slider-container .noUi-target {
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     border-radius: 25px;
@@ -103,7 +103,7 @@ li.slider-label::after {
     padding: 0;
     margin: 0;
 }
-.slider-container ::ng-deep.noUi-handle {
+.slider-container .noUi-handle {
 	border-radius: 50%;
 		-webkit-box-shadow: 0px 3px 22px -4px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 3px 22px -4px rgba(0, 0, 0, 0.3);
@@ -116,7 +116,7 @@ li.slider-label::after {
 	
 }
 
-.slider-container ::ng-deep.noUi-base:after {
+.slider-container .noUi-base:after {
 	width: 100%;
 	height: 6px;
 	display: block;
@@ -128,16 +128,16 @@ li.slider-label::after {
 	border-radius: 25px;
 }
 
-::ng-deep.noUi-base {
+.slider-container .noUi-base {
 	width: calc(98%);
 }
- ::ng-deep.noUi-base .noUi-connects{
+.slider-container .noUi-base .noUi-connects{
 	width: calc(98%);
 	height: 6px;
 	overflow:visible;
 
 }
-::ng-deep.noUi-base .noUi-connect {
+.slider-container .noUi-base .noUi-connect {
     border: none;
     height: 6px;
     padding: 0;
@@ -153,11 +153,11 @@ li.slider-label::after {
     background: linear-gradient(30deg, #FFB414, #FF5800);
 	width: 100%;
 }
-::ng-deep.noUi-handle:after{
+.slider-container .noUi-handle:after{
 	display:none;
 }
 
-::ng-deep.noUi-handle:before{
+.slider-container .noUi-handle:before{
 	content: "";
 	width: 0;
 	height: 0;
@@ -186,7 +186,7 @@ li.slider-label::after {
 	.slider-tags {
     width:98%;
 	}
-.slider-container ::ng-deep.noUi-base:after{
+.slider-container .noUi-base:after{
     width: 99%;
 		right:0;
 	}
@@ -205,15 +205,15 @@ li.slider-label::after {
 		-webkit-tap-highlight-color: transparent;
 	}
 	
-.slider-container ::ng-deep.noUi-base:after {
+.slider-container .noUi-base:after {
 		width: calc(100% - 13px);
     right: 3px;
 	}
-	.slider-container ::ng-deep.noUi-target {
+	.slider-container .noUi-target {
 		height: 23px;
 	}
 
-	.slider-container ::ng-deep.noUi-base .noUi-connect {
+	.slider-container .noUi-base .noUi-connect {
 		margin: 10px 0 0 10px;
 	}
 
@@ -229,13 +229,13 @@ li.slider-label::after {
 		margin-bottom:0;
 		position:relative;
 	}
-	.slider-container ::ng-deep.noUi-target {
+	.slider-container .noUi-target {
 		height: 23px;
 	}
-	.slider-container ::ng-deep.noUi-base:after {
+	.slider-container .noUi-base:after {
 	 	width: calc(100% - 13px);
 	}
-	.slider-container ::ng-deep.noUi-base .noUi-connect {
+	.slider-container .noUi-base .noUi-connect {
 		margin: 10px 0 0 10px;
 	}
 	.slider-tags {

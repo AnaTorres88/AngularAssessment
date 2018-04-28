@@ -20,8 +20,11 @@
 					<div class="question-body" *ngIf="question.inputType=='slider'">
 						<slider [question]="question"></slider>
 					</div>
+					<div class="question-body" *ngIf="question.inputType=='multislider'">
+						<multislider [question]="question"></multislider>
+					</div>
 					<div class="question-body" *ngIf="question.inputType=='openQuestion'">
-						<div>OPEN</div>
+						open question
 					</div>
 				</div>
 			</div>

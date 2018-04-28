@@ -1,9 +1,10 @@
-import { Component,Input,OnInit } from '@angular/core';
+import { Component,Input,OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'slider',
   templateUrl: './slider.component.html',
-  styleUrls: ['./slider.component.css']
+  styleUrls: ['./slider.component.css'],
+	encapsulation: ViewEncapsulation.None,
 })
 export class SliderComponent implements OnInit {
 	title:string;
@@ -22,7 +23,6 @@ export class SliderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-		console.log(this.question)
 		this.options=this.question.options;
 		this.max=this.question.options.length;
 		this.vals=this.question.options.lengt+1;

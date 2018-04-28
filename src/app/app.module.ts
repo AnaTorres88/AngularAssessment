@@ -16,6 +16,7 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
 import { RadioComponent } from './radio/radio.component';
 import { SliderComponent } from './slider/slider.component';
 import { NouisliderModule } from 'ng2-nouislider';
+import { MultisliderComponent } from './multislider/multislider.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +25,7 @@ import { NouisliderModule } from 'ng2-nouislider';
     CheckboxComponent,
     RadioComponent,
     SliderComponent,
+    MultisliderComponent,
   ],
   imports: [
     BrowserModule, HttpModule, HttpClientModule,
