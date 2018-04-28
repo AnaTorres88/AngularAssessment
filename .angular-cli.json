@@ -20,6 +20,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+				"../node_modules/nouislider/distribute/nouislider.min.css",
         "styles.css",
         "assessment-grid.css"
       ],

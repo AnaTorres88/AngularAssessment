@@ -143,29 +143,8 @@ footer {
 	-moz-border-radius: 0px 0px 5px 5px;
 	-webkit-border-radius: 0px 0px 5px 5px;
 	}
-	.slider-container {
-		width: 96%;
-		min-height:1px;
-		top:0;
-		bottom:0;
-		margin: 0 auto;
-	}
-	.vue-slider-component .noUi-target{
-		background-color:#D1DBE3;
-	}
-	.vue-slider-component:after{
-			position: absolute;
-			display:block;
-			content:"";
-			height: 25px;
-			background: #f6f6f6;
-			width:100%;
-			left:0;
-			right:0;
-			z-index: 0;
-			top:-1px;
-			border-radius: 25px;
-	}
+
+
 
 	h1 {
 		margin: 30px 0 30px;
@@ -173,18 +152,12 @@ footer {
 
 	}
 
-
-
 .question-body{
 	min-height:1px;	
 }
 	@media (min-width: 991px) {
-		.content {
-		}
-		.slider-container {
-			max-width: 490px;
-			margin: 0 auto;
-		}
+
+
 		h5 {
 			font-size: 20px;
 			padding: 0 30px 0 30px;
@@ -194,19 +167,7 @@ footer {
 		}
 	}
 	@media (min-width: 1200px) {
-		.content {
-			
-		}
 
-		.slider-container {
-			max-width: 490px;
-			margin: 0 auto;
-		}
-		.slider-question{
-			height: 207px;
-			margin-bottom:0;
-			position:relative;
-		}
 		h5 {
 			font-size: 20px;
 			padding: 0 30px 0 30px;

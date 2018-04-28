@@ -1,0 +1,22 @@
+<div class="slider-container">
+	<div class="slider-tooltip">
+		<div class="tooltip-contents">
+			{{title}}
+			<br> {{content}}
+		</div>
+	</div>
+
+	<div class="slider-container">
+		<nouislider [(ngModel)]="currentIndex" [config]="sliderConfig" (update)="labels($event)"></nouislider>
+	</div>
+</div>
+
+<div class="slider-tags">
+	<ul>
+
+		<li *ngFor="let option of question.options; let i=index" class="slider-label" (click)="labels(i)" [ngClass]="i==currentIndex ? 'current' : ''">
+			{{i}}
+			<br> {{question.options[i].option}}
+		</li>
+	</ul>
+</div>

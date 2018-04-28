@@ -18,7 +18,7 @@
 						<radio [question]="question"></radio>
 					</div>
 					<div class="question-body" *ngIf="question.inputType=='slider'">
-						<div>SLIDER</div>
+						<slider [question]="question"></slider>
 					</div>
 					<div class="question-body" *ngIf="question.inputType=='openQuestion'">
 						<div>OPEN</div>

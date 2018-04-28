@@ -14,18 +14,21 @@ import {
 } from '@angular/platform-browser/animations';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { RadioComponent } from './radio/radio.component';
-
+import { SliderComponent } from './slider/slider.component';
+import { NouisliderModule } from 'ng2-nouislider';
 @NgModule({
   declarations: [
     AppComponent,
     IntroComponent,
     QuestionComponent,
     CheckboxComponent,
-    RadioComponent
+    RadioComponent,
+    SliderComponent,
   ],
   imports: [
     BrowserModule, HttpModule, HttpClientModule,
-FormsModule, BrowserAnimationsModule, HttpClientInMemoryWebApiModule.forRoot(
+FormsModule, BrowserAnimationsModule,	NouisliderModule
+, HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     )
   ],
