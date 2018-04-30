@@ -17,6 +17,7 @@ import { RadioComponent } from './radio/radio.component';
 import { SliderComponent } from './slider/slider.component';
 import { NouisliderModule } from 'ng2-nouislider';
 import { MultisliderComponent } from './multislider/multislider.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { MultisliderComponent } from './multislider/multislider.component';
     RadioComponent,
     SliderComponent,
     MultisliderComponent,
+    DropdownComponent,
   ],
   imports: [
     BrowserModule, HttpModule, HttpClientModule,

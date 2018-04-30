@@ -23,6 +23,9 @@
 					<div class="question-body" *ngIf="question.inputType=='multislider'">
 						<multislider [question]="question"></multislider>
 					</div>
+					<div class="question-body" *ngIf="question.inputType=='dropdown'">
+						<dropdown [question]="question"></dropdown>
+					</div>
 					<div class="question-body" *ngIf="question.inputType=='openQuestion'">
 						open question
 					</div>

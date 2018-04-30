@@ -1,0 +1,16 @@
+	<div class="select-input a-row" aria-label="dropdown" name="dropdown">
+		<a [ngClass]="dropdownHeader()" (click)="toggle()" [ngClass]="dropdownHeader()">
+			{{title()}}
+			<img src="./assets/gray-down-arrow.svg" class="arrow-down"/>
+		</a>
+		<div class="dropdown-container" *ngIf="isOpen">
+			<ul [ngClass]="openedDropdown()">
+				<li *ngFor="let option of question.options; let i=index"
+						[ngClass]="toggleHover == option && hoverActive ? 'hover-class' : false" 
+						(mouseover)="hover(option)" (mouseout)=" hover(option)"(click)="chosen(i)" [value]="option">
+				{{option.option}}
+				</li>
+
+		</ul>
+		</div>
+	</div>
