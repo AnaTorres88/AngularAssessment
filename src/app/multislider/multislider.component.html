@@ -5,13 +5,12 @@
 				<span class="slider-title"> {{question.sliderInfo[i].title}}</span>
 			</div>
 			<div class="slider-input-container">
-				<div class="range-input-container">
 					<div class="slider" [id]="'slider'+[i]">
 						<nouislider [(ngModel)]="question.options[i].initial"[config]="multisliderConfig" (update)="changeSlider(i)"></nouislider>
 					</div>
-				</div>
+					<input class="number-box" [value]="roundedNum(i)" (change)="changeBox(i,$event.target.value,$event)" type="number"> 
 			</div>
-			<input class="number-box" [value]="roundedNum(i)" (change)="changeBox(i,$event.target.value,$event)" type="number"> 
+			
 		</div>
 	</div>
 </div>
