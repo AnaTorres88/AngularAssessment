@@ -26,8 +26,11 @@
 					<div class="question-body" *ngIf="question.inputType=='dropdown'">
 						<dropdown [question]="question"></dropdown>
 					</div>
+					<div class="question-body" *ngIf="question.inputType=='yesNo'">
+						<boolean [question]="question"></boolean>
+					</div>
 					<div class="question-body" *ngIf="question.inputType=='openQuestion'">
-						open question
+						<open-question [question]="question"></open-question>
 					</div>
 				</div>
 			</div>

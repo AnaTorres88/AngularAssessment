@@ -66,7 +66,7 @@ display:none;
 li.slider-label::after {
     display: flex;
     content: "";
-    top: 44%;
+		top: 31%;
     margin: 0 27px;
     position: absolute;
 		width: 1px;
@@ -176,6 +176,9 @@ li.slider-label::after {
 	.slider-tags {
 		width: 93%;
 	}
+	li.slider-label::after {
+		top:27%;
+	}
 }
 @media (min-width: 480px) {
 	.slider-tags {
@@ -189,6 +192,9 @@ li.slider-label::after {
 .slider-container .noUi-base:after{
     width: 99%;
 		right:0;
+	}
+	li.slider-label::after {
+		top: 51%;
 	}
 }
 @media (min-width: 991px) {
@@ -215,6 +221,9 @@ li.slider-label::after {
 
 	.slider-container .noUi-base .noUi-connect {
 		margin: 10px 0 0 10px;
+	}
+	li.slider-label::after {
+		top: 46%;
 	}
 
 }
@@ -263,5 +272,7 @@ li.slider-label::after {
 	.slider-tags li:first-letter{
 		font-size: 18px;
 	}
-	
+	li.slider-label::after {
+		top:45%;
+	}
 }

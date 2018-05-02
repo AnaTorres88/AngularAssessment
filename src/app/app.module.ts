@@ -18,6 +18,8 @@ import { SliderComponent } from './slider/slider.component';
 import { NouisliderModule } from 'ng2-nouislider';
 import { MultisliderComponent } from './multislider/multislider.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
+import { BooleanComponent } from './boolean/boolean.component';
+import { OpenComponent } from './open/open.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +30,8 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     SliderComponent,
     MultisliderComponent,
     DropdownComponent,
+    BooleanComponent,
+    OpenComponent,
   ],
   imports: [
     BrowserModule, HttpModule, HttpClientModule,

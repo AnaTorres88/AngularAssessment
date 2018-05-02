@@ -1,0 +1,196 @@
+
+ul.boolean-input{
+		width:100%;
+		list-style-type:none;
+		margin:0;
+		padding:0 15px;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-align: center;
+		-moz-box-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: flex-start;
+		align-items: center;
+		align-self: flex-start;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	} 
+ul.boolean-input .tooltip-style{
+	text-align: center;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-ms-flex-line-pack: center;
+	align-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding-bottom: 2px;
+	float: right;
+
+}
+ul.boolean-input .tooltip-style a {
+		background: none;
+    border: 1px solid #444;
+    color: #444;
+    border-radius: 50%;
+    font-weight: 600;
+    width: 16px;
+    height: 16px;
+
+}
+
+	ul.boolean-input li{
+		width:100%;
+    overflow-y: hidden;
+		display:block;
+		font-weight:normal;
+		padding:0;
+		margin: 0 0 15px 0;
+		border-radius: 5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+		-webkit-tap-highlight-color: transparent;
+		-webkit-transition:all 0.3s linear;
+		-o-transition:all 0.3s linear;
+		-moz-transition:all 0.3s linear;
+		transition:all 0.3s linear;
+	}
+
+ul.boolean-input input[type="radio"] {
+    opacity:0;
+		display:none;
+	}
+	
+ul.boolean-input input[type="radio"] + label {
+		font-size:14px;
+		margin: 0;
+		display: block;
+	
+
+}
+
+ul.boolean-input input[type="radio"] + label .change-span {
+		margin-top: -5px;
+		border-radius: 0px 0px 5px 5px;
+    -moz-border-radius: 0px 0px 5px 5px;
+    -webkit-border-radius: 0px 0px 5px 5px;
+	}
+
+	
+ul.boolean-input input[type="radio"] + label span {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 22px;
+	color: #434A54;
+	padding: 12px 0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	text-align:center;
+	display:inline-block;
+	height:49px;
+	width: 100%;
+	margin: 0;
+	vertical-align:middle;
+	cursor:pointer;
+	 background-color:#EFF3F5;
+ border: 1px solid #EFF3F5;
+	-webkit-transition:all 0.3s linear;
+	-o-transition:all 0.3s linear;
+	-moz-transition:all 0.3s linear;
+	transition:all 0.3s linear;
+	}
+
+
+
+ul.boolean-input input[type="radio"] + label span.checked {
+	border: 1px solid #979797;
+	background: #D1DBE3;
+	font-weight: 600;
+
+}
+
+.has-tooltip {
+	background: none;
+	border: 1px solid #444;
+	color: #444;
+	border-radius: 50%;
+	font-weight: 600;
+	width: 16px;
+	height: 16px;
+	text-align: center;
+	display:inline-flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	padding-bottom:2px;
+	float:right;
+	margin-right:15px;
+}
+ul.boolean-input .ui-tooltip{
+	max-width: 197px;
+}
+.not-selected{
+	opacity:0.5;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-transition:all 0.3s linear;
+	-o-transition:all 0.3s linear;
+	-moz-transition:all 0.3s linear;
+	transition:all 0.3s linear;
+}
+
+@media (min-width: 768px) {
+	ul.boolean-input{
+		flex-wrap: nowrap;
+		} 
+	
+	ul.boolean-input li {
+		width: 50%;
+    margin: 0 15px 15px 0;
+	}
+
+}
+@media (min-width: 991px) {
+	ul.boolean-input{
+		padding:0 30px;
+	} 
+	ul.boolean-input li:nth-of-type(3n){
+		margin-right:0;
+		margin-left:0;
+	}
+	ul.boolean-input li:hover {
+	-webkit-box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.2);
+	}
+
+}
+@media (min-width: 1200px) {
+	ul.boolean-input{
+		padding:0 30px;
+		flex-wrap: nowrap;
+		max-height: 200px;
+	} 
+	ul.boolean-input li{
+		width:251.6666px;
+		margin: 0 15px 15px 0;
+	}
+	ul.boolean-input li:nth-of-type(3n){
+		margin-right:0;
+		margin-left:0;
+	}
+	ul.boolean-input li:hover {
+	-webkit-box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.2);
+	}
+
+}

@@ -11,7 +11,7 @@ export class DropdownComponent implements OnInit {
 	isActive:boolean=false;
 	toggleHover:string="";
 	selectedOption:string="";
-	
+	hoverActive:boolean=false;
   constructor() { }
 
   ngOnInit() {

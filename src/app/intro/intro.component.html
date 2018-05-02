@@ -1,7 +1,8 @@
 <div *ngIf="introData !== undefined">
 <!--Assessment MEDIA template-->	
 	<div class="assessmentMedia xs-acol-12 sm-acol-12 acol-6 no-padding">
-		<img [src]= "introData.mediaIntro.imageSrc" [alt]="introData.mediaIntro.imageAlt" >
+
+		<div class="singleAssesmentImg" [ngStyle]="{background:'transparent url('+introData.mediaIntro.imageSrc+') no-repeat center center/cover'}"></div>
 	</div>
 		<!--Assessment intro template-->	
 	<div class="xs-acol-12 acol-6 assessment-intro">

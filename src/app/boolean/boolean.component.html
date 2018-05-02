@@ -1,0 +1,9 @@
+<ul class="boolean-input a-row">
+	<li *ngFor="let option of question.options; let i=index" [ngClass]="option!==question.selectedAnswer ? 'not-selected':''" aria-label="radio">	
+		<input type ="radio" [id]="option.text" [name]="option.text" [value]="option" [checked]="option"[(ngModel)]="question.selectedAnswer" (click)="booleanValues(option,i)">
+		<label [for]="option.text">
+			<span [ngClass]="question.selectedAnswer == option ? 'checked':''">{{option.text}}</span>
+			
+		</label>
+	</li>
+</ul>
