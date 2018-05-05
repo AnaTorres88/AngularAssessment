@@ -21,9 +21,12 @@ export class AppComponent  {
   	this._appData.getQuiz()
 		.subscribe(quiz => this.appData = quiz[0]);
   }
-    showAssessmentReceive($event){
+	showAssessmentReceive($event){
     this.showAssessment=$event;
-    console.log($event)
-
   }
+	evaluateQuizReceive($event){
+	 this.surveyCompleted=$event.eval;
+	 this.showAssessment=false;
+	
+	}
 }

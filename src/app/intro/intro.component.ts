@@ -22,6 +22,5 @@ export class IntroComponent implements OnInit {
   }
   showAssessment() {
    this.showTheAssessment.emit(this.show)
-   console.log("clicked")
   }
 }

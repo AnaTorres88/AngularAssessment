@@ -20,6 +20,7 @@ import { MultisliderComponent } from './multislider/multislider.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { BooleanComponent } from './boolean/boolean.component';
 import { OpenComponent } from './open/open.component';
+import { ResultsComponent } from './results/results.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +33,7 @@ import { OpenComponent } from './open/open.component';
     DropdownComponent,
     BooleanComponent,
     OpenComponent,
+    ResultsComponent,
   ],
   imports: [
     BrowserModule, HttpModule, HttpClientModule,

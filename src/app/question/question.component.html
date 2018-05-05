@@ -43,8 +43,8 @@
 				{{length}}
 				
 			</span>
-			<button class="next-btn" (click)="next()" [hidden]="activeSlide+1==appData.Quiz.theQuestions.lenght">NEXT</button>
-			<button class="next-btn results-btn" id="results" [hidden]="activeSlide+1!==appData.Quiz.theQuestions.lenght">VIEW MY RESULTS</button>
+			<button class="next-btn" (click)="next()" [hidden]="activeSlide+1==length" [disabled]=validate()>NEXT</button>
+			<button class="next-btn results-btn" id="results" [hidden]="activeSlide+1!==length" [disabled]=validate() (click)="evaluateQuiz()">VIEW MY RESULTS</button>
 		</footer>
 	</div>
 </div>

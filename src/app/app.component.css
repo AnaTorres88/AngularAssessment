@@ -1,0 +1,21 @@
+@media (min-width: 768px) {}
+@media (min-width: 991px) {
+	.results{
+		width: 91%;
+		margin: 0 auto;
+	}
+	.results h3 {
+		margin-left:0;
+	}
+}
+
+@media (min-width: 1200px) {
+	.results{
+		width: 91%;
+		margin: 0 auto;
+	}
+	.results h3 {
+		margin-left:0;
+	}
+
+}
