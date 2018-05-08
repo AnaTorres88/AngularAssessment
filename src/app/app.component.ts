@@ -87,7 +87,7 @@ export class AppComponent  {
 
         this.finished=finishedQuiz;
        let r = score[resultIndex]
-        r.Id = this.quiz.Id;
+        r.Id = finishedQuiz.Id;
         this.result=r;
 
       }

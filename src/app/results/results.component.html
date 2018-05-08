@@ -1,25 +1,24 @@
-<div class="section-question change-border-radius-bottom">
+<div class="section-question" *ngIf="displayedResult">
 	<div class="a-row">
 		<div class=" xs-acol-12 sm-acol-12 acol-6 results-image">
-			<img/>
+			<img [src]="displayedResult.img"/>
 		</div>
 		<div class="xs-acol-12 sm-acol-12 acol-6 results-description">		
-		<h3 class="results-title">Title</h3>
-			{{displayedResult | json}}
-			<h5>Subtitle</h5>
-			<p>Results description</p>
-			<p>Results description</p>
+		<h3 class="results-title">{{displayedResultsPage.resultsTitle}}</h3>
+			<h5>{{displayedResult.id}}</h5>
+			<p>{{displayedResult.roleDescription}}</p>
+			<p>{{displayedResult.roleDescription2}}</p>
 		</div>
 
 		<footer class="controls">
 			<div class="xs-acol-12 sm-acol-12 acol-6 retake-container">
 				<a class="re-take-btn">
-					<img/><span></span>
+					<img [src]="displayedResultsPage.retakeIcon"/><span>{{displayedResultsPage.retakeButton}}</span>
 				</a>
 			</div>
 			<div class="xs-acol-12 sm-acol-12 acol-6 contact-us-container">
-				<button class="next-btn contact-us-btn">
-					button contact2
+				<button class="next-btn contact-us-btn" (click)="location.href=displayedResultsPage.contactUrl">
+					{{displayedResultsPage.contactButton}}
 				</button>
 			</div>
 		</footer>
