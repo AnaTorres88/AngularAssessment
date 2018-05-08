@@ -251,7 +251,7 @@ export class InMemoryDataService implements InMemoryDbService {
           "instructions": "",
           "inputType": "openQuestion",
           "required": false,
-          "questionValue": 2,
+          "value": 2,
           "selectedAnswer": ""
           }
       ]

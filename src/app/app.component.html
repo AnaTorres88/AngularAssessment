@@ -16,8 +16,9 @@
     <div *ngIf="surveyCompleted==true" class="results">
       <h3 class="in-assessment">{{appData.assessmentIntro.introTitle}}</h3>
       <div class="section">
-          <results></results>
+          <results [result]="result"></results>
       </div>
     </div>
   </nav>
 </div>
+{{sumValues}}
