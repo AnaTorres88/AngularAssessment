@@ -1,7 +1,8 @@
 <div>
 	<ul class="checkbox-input a-row">
 			<li aria-label="checkbox" *ngFor="let option of question.options; let i=index">
-				<input type="checkbox" [id]="option[i+1]" [name]="option[i+1]" [value]="option[i]" [(ngModel)]="option[i]" (change)="checkboxValues(option[i],i)">
+				<input type="checkbox" [id]="option[i+1]" [name]="option[i+1]" [checked]="option && check!==false" [value]="option[i+1]" 
+			  [(ngModel)]="option.check" (change)="checkboxValues(option,i)">
 				<label [for]="option[i+1]">
 					<div  *ngIf="option.img" class="option-img"  [ngStyle]="{background:'transparent url(' + option.img + ') no-repeat center center/' + 'cover'}"></div>
 		

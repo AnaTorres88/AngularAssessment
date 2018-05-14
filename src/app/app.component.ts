@@ -16,7 +16,8 @@ export class AppComponent  {
   finished:any;
   quiz:any;
   result:any;
-
+  quizFinished:number;
+	quizCompleted:boolean;
   constructor(private _appData:QuizDataService) { }
 
 
@@ -95,5 +96,34 @@ export class AppComponent  {
 
     }
   }
-
+  resetQuizReceive($event){
+		this.quizFinished=$event.index;
+		this.quizCompleted=$event.completed;
+		this.resetValues(this.appData.Quiz, this.quizFinished);
+	}
+	resetValues(theQuiz, finish){
+		let index=0;
+		this.surveyCompleted=false;
+		this.showAssessment=false;
+		this.sumValues=0;
+		
+		while(index < theQuiz.theQuestions.length) {
+			if(theQuiz.theQuestions[index].inputType == "checkbox"){
+				let length=theQuiz.theQuestions[index].selectedAnswer.length;
+				let answer=theQuiz.theQuestions[index].selectedAnswer;
+				
+				answer.forEach(
+					(val,index)=>
+					val.check=false,
+					answer.splice(index,length));
+			}	else if (theQuiz.theQuestions[index].inputType=="multislider"){
+				theQuiz.theQuestions[index].options.forEach(
+					(val)=>val.initial=0);
+				
+			}else{
+				theQuiz.theQuestions[index].selectedAnswer="";
+			}
+			index++
+		}
+	}
 }

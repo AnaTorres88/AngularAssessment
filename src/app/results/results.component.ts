@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'results',
@@ -10,12 +10,16 @@ export class ResultsComponent implements OnInit {
 @Input() resultsPage:any;
 displayedResultsPage:any;
 displayedResult:any;
-
-  constructor() { }
+evalValues:any={index:0,completed:true}
+@Output() quizReset = new EventEmitter<any>();
+	constructor() { }
 
   ngOnInit() {
   	this.displayedResult=this.result;
 		this.displayedResultsPage=this.resultsPage;
   }
+	goReset(){
+		this.quizReset.emit(this.evalValues);
+	}
 
 }
