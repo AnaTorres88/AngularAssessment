@@ -21,6 +21,7 @@ import { DropdownComponent } from './dropdown/dropdown.component';
 import { BooleanComponent } from './boolean/boolean.component';
 import { OpenComponent } from './open/open.component';
 import { ResultsComponent } from './results/results.component';
+import { ColorSliderChangeDirective } from './color-slider-change.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +35,7 @@ import { ResultsComponent } from './results/results.component';
     BooleanComponent,
     OpenComponent,
     ResultsComponent,
+    ColorSliderChangeDirective,
   ],
   imports: [
     BrowserModule, HttpModule, HttpClientModule,

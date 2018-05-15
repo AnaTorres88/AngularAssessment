@@ -1,12 +1,24 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input,Directive, ElementRef, Renderer2, NgModule } from '@angular/core';
 import { QuizDataService } from './quiz-data.service';
 import { JsonPipe } from '@angular/common';
+import {BrowserModule} from '@angular/platform-browser';
+import {ColorSliderChangeDirective} from './color-slider-change.directive';
+
+@NgModule({
+  // Import SharedModule
+	imports: [BrowserModule],
+	declarations:[
+		ColorSliderChangeDirective, 
+		AppComponent]
+
+})
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent  {
   title = 'app';
 	appData:any;

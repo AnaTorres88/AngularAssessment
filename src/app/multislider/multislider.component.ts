@@ -5,13 +5,15 @@ import { Component,Input,OnInit, ViewEncapsulation} from '@angular/core';
   templateUrl: './multislider.component.html',
   styleUrls: ['./multislider.component.css'],
 	encapsulation: ViewEncapsulation.None,
-
-
 })
+
+
+
 export class MultisliderComponent implements OnInit {
 	@Input() question:any;
 	multisliderConfig:any;
 	answer:any;
+
   constructor() { }
 
   ngOnInit() {

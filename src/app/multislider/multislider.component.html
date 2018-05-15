@@ -2,7 +2,7 @@
 	<div class="multi-slider-container">
 		<div class="multislider" *ngFor="let option of question.options; let i = index">
 			<div class="title-container">
-				<span class="slider-title"> {{question.sliderInfo[i].title}}</span>
+				<span class="slider-title" colorChange> {{question.sliderInfo[i].title}}</span>
 			</div>
 			<div class="slider-input-container">
 					<div class="slider" [id]="'slider'+[i]">
