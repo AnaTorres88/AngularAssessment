@@ -2,11 +2,11 @@
 	<div class="multi-slider-container">
 		<div class="multislider" *ngFor="let option of question.options; let i = index">
 			<div class="title-container">
-				<span class="slider-title" colorChange> {{question.sliderInfo[i].title}}</span>
+				<span class="slider-title"> {{question.sliderInfo[i].title}}</span>
 			</div>
 			<div class="slider-input-container">
 					<div class="slider" [id]="'slider'+[i]">
-						<nouislider [(ngModel)]="question.options[i].initial"[config]="multisliderConfig" (update)="changeSlider(i)"></nouislider>
+						<nouislider [(ngModel)]="question.options[i].initial"[config]="multisliderConfig" (update)="changeSlider(i)" [colorChange]="question.sliderInfo[i].color"></nouislider>
 					</div>
 					<input class="number-box" [value]="roundedNum(i)" (change)="changeBox(i,$event.target.value,$event)" type="number"> 
 			</div>

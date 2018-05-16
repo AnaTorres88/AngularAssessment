@@ -1,4 +1,13 @@
-import { Component,Input,OnInit, ViewEncapsulation} from '@angular/core';
+import { Component,Input,OnInit, ViewEncapsulation, NgModule} from 
+
+'@angular/core';
+
+import {ColorSliderChangeDirective} from '../color-slider-change.directive';
+
+@NgModule({
+	declarations:[
+		ColorSliderChangeDirective]
+})
 
 @Component({
   selector: 'multislider',

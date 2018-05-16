@@ -1,4 +1,4 @@
-import { Component, Input,Directive, ElementRef, Renderer2, NgModule } from '@angular/core';
+import { Component, Input,Directive,NgModule } from '@angular/core';
 import { QuizDataService } from './quiz-data.service';
 import { JsonPipe } from '@angular/common';
 import {BrowserModule} from '@angular/platform-browser';
